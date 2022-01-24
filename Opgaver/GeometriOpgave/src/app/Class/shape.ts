@@ -1,10 +1,9 @@
 export abstract class Shape {
-    public A: number;
-    public B: number;
+    
+    protected A: number;
 
-    protected constructor(a: number, b: number) {
+    constructor(a: number) {
         this.A = a;
-        this.B = b;
     }
 
     public abstract GetArea() : number;
