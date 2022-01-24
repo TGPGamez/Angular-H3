@@ -1,6 +1,6 @@
 export abstract class Shape {
     
-    protected A: number;
+    A: number;
 
     constructor(a: number) {
         this.A = a;

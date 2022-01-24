@@ -1,0 +1,11 @@
+.square {
+    display: block;
+    background-color: navy;
+    border: 1.5px solid darkslategray;
+    margin: 0 auto;
+}
+
+.menu {
+    display: block;
+    position: fixed;
+}

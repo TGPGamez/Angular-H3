@@ -1,0 +1,15 @@
+<div class="menu">
+    <input type="number" (change)="onChange()" [(ngModel)]="A" min="1">
+    <label>cm</label>
+    <br>
+    <input type="number" (change)="onChange()" [(ngModel)]="B" min="1">
+    <label>cm</label>
+    <br>
+    <label>Areal: {{area}}</label>
+    <br>
+    <label>Omkreds: {{circumference}}</label>
+
+</div>
+<br>
+<div class="rectangle" [ngStyle]="{'height.px': A, 'width.px': B}"></div>
+

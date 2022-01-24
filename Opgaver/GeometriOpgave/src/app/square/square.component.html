@@ -1,0 +1,14 @@
+<div class="menu">
+    <div>
+        <input type="number" (change)="onChange()" [(ngModel)]="A" min="1">
+        <label>cm</label>
+        <br>
+        <label>Areal: {{area}}</label>
+        <br>
+        <label>Omkreds: {{circumference}}</label>
+    </div>
+
+</div>
+<br>
+<div class="square" [ngStyle]="{'height.px': A, 'width.px': A}"></div>
+

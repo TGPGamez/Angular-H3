@@ -1,0 +1,12 @@
+.rectangle {
+    display: block;
+    background-color: red;
+    border: 1.5px solid darkslategray;
+    margin: 0 auto;
+}
+
+.menu {
+    display: block;
+    position: fixed;
+    width: 100%;
+}

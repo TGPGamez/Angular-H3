@@ -1,8 +1,5 @@
-<input type="number" (change)="inputChange($event)" [(ngModel)]="input1" min="0"><label for="cm">cm</label>
-<br>
-<input type="number" (change)="inputChange($event)" [(ngModel)]="input2" min="0"><label for="cm">cm</label>
-<br>
-<p>Type: {{shape.constructor.name}}</p>
-<p>Areal: {{shape.GetArea()}}</p>
-<p>Omkreds: {{shape.GetCircumference()}}</p>
-<canvas id="shapeCanvas" width="200" height="200"></canvas>
+<div class="text-center">
+    <app-square></app-square>
+    <br>
+    <app-rectangle></app-rectangle>
+</div>

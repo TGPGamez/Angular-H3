@@ -2,7 +2,7 @@ import { Shape } from "./shape";
 
 export class Rectangle extends Shape {
 
-    protected B: number;
+    B: number;
 
     constructor(a: number, b: number) {
         super(a);
