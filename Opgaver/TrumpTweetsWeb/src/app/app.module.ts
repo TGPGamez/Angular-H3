@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TrumpTweetsComponent } from './trump-tweets/trump-tweets.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TrumpTweetsComponent
   ],
   imports: [
     BrowserModule,
