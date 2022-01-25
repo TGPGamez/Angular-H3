@@ -26,7 +26,12 @@ export class TrumpTweetsComponent implements OnInit {
       return text.includes(this.input);
   }
 
-  EnoughLikes(likes: number) : boolean {
-    return likes > this.overLikes;
+  EnoughLikes(likes: number, date: Date) : boolean {
+    return likes > this.overLikes && this.InRightMonth(date);
+  }
+
+  InRightMonth(date: Date) : boolean {
+    let newDate: Date = new Date(date.toString());
+    return newDate.getMonth() >= 5;
   }
 }

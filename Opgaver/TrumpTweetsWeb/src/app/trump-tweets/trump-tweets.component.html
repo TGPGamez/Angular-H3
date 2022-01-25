@@ -11,14 +11,14 @@
         <tbody *ngFor="let tweet of tweets">
             <tr *ngIf="SearchForWord(tweet.text); else elseBlock" style="background-color: green;">
                 <td>{{tweet.date | date}}</td>
-                <td [class.likes]="EnoughLikes(tweet.likes)">{{tweet.likes | number}}</td>
+                <td [class.likes]="EnoughLikes(tweet.likes, tweet.date)">{{tweet.likes | number}}</td>
                 <td>{{tweet.text}}</td>
             </tr>
             <ng-template #elseBlock>
                 <tr>
                     <td>{{tweet.date | date}}</td>
                     <td>{{tweet.likes | number}}</td>
-                    <td [class.likes]="EnoughLikes(tweet.likes)">{{tweet.text}}</td>
+                    <td [class.likes]="EnoughLikes(tweet.likes, tweet.date)">{{tweet.text}}</td>
                 </tr>
             </ng-template>
         </tbody>
