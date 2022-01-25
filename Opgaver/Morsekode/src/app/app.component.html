@@ -1,0 +1,12 @@
+<div class="text-center">
+  <h1>Input her</h1>
+  <textarea [(ngModel)]="message" style="resize:none; width: 200px; height: 100px; margin-top: 10px;"></textarea>
+  <div>
+    <br>
+    <h2>Morse kode</h2>
+    <p><strong>{{ message | toMorse }}</strong></p>
+    <br>
+    <h2>MD5 kode</h2>
+    <p><strong>{{ message | toMd5 }}</strong></p>
+  </div>
+</div>
