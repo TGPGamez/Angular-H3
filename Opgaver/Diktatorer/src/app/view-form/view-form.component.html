@@ -1,1 +1,18 @@
-<p>view-form works!</p>
+<div style="width: 1200px; display: block; margin: 0 auto;">
+    <h1><strong>Dictators</strong></h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Description</th>
+        </thead>
+        <tbody *ngFor="let dictator of dictators; let i = index">
+            <tr>
+                <td>{{ dictator.name }} {{ dictator.lastname }}</td>
+                <td>{{ dictator.birthday }}</td>
+                <td>{{ dictator.description }}</td>
+                <button (click)="DeleteDictator(i)" style="background-color: red; color: white; margin: 2px;">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>

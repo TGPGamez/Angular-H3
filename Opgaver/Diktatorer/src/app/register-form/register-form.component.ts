@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { RegisterService } from '../service/register.service';
+import { DictatorService } from '../service/dictator.service';
 
 
 @Component({
@@ -10,13 +10,13 @@ import { RegisterService } from '../service/register.service';
 })
 export class RegisterFormComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private regService: RegisterService) { }
+  constructor(private fb: FormBuilder, private dicService: DictatorService) { }
 
   registerForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
     lastname: ['', [Validators.required, Validators.minLength(2)]],
     birthday: ['', Validators.required],
-    description: ['', Validators.required],
+    description: ['', Validators.required]
   });
 
   ngOnInit(): void {
@@ -24,9 +24,10 @@ export class RegisterFormComponent implements OnInit {
 
 
   onSubmit() {
-    this.regService.register(this.registerForm.value).subscribe(() => {
-
+    console.log(this.registerForm.value);
+    this.dicService.postDictator(this.registerForm.value).subscribe(() => {
     });
+    window.location.reload();
   }
 
 }
