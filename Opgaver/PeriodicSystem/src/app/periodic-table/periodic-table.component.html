@@ -1,0 +1,33 @@
+<div>
+    <div class="pt-grid">
+        <div [style.grid-column]="1" [style.grid-row]="9"></div>
+        <div [style.grid-column]="2" [style.grid-row]="9"></div>
+        <div [style.grid-column]="1" [style.grid-row]="10"></div>
+        <div [style.grid-column]="2" [style.grid-row]="10"></div>
+        <div class="stretch-items"></div>
+        <div class="label57to71">57-71</div>
+        <div class="label89to103">89-103</div>
+        <div class="label57to71-period"><h1>6</h1></div>
+        <div class="label89to103-period"><h1>7</h1></div>
+        <ng-template ngIf="true" *ngFor="let element of elements; let i = index">
+            <div *ngIf="checkNumber(element.atomicNumber) else: elseNumber" [style.grid-row]="element.period" [style.grid-column]="element.group"
+                [style.background-color]="getColor(element.cpkHexColor)" class="element">
+                <div>
+                    <p><b>{{element.atomicNumber}}</b></p>
+                    <h1><strong>{{element.symbol}}</strong></h1>
+                    <p><em>{{element.name}}</em></p>
+                    <p><em>{{element.atomicMass}}</em></p>
+                </div>
+            </div>
+            <ng-template #elseNumber>
+                <div [style.grid-row]="element.period + 3"
+                    class="element">
+                    <p><b>{{element.atomicNumber}}</b></p>
+                    <h1><strong>{{element.symbol}}</strong></h1>
+                    <p><em>{{element.name}}</em></p>
+                    <p><em>{{element.atomicMass}}</em></p>
+                </div>
+            </ng-template>
+        </ng-template>
+    </div>
+</div>
