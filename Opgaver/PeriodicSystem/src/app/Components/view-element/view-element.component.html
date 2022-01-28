@@ -1,8 +1,18 @@
-<div class="elementInfo">
-    <div>
+<div class="element-main">
+    <div class="element-head" [style.Background-color]="GetColor()">
         <p>{{currentElement?.atomicNumber}}</p>
         <h1>{{currentElement?.symbol}}</h1>
         <p>{{currentElement?.name}}</p>
         <p>{{currentElement?.atomicMass}}</p>
+    </div>
+    <div class="element-body">
+        <p>Electron Negativity: <strong>{{currentElement?.electronegativity}}</strong></p>
+        <p>Radius: <strong>{{currentElement?.atomicRadius}}</strong></p>
+        <p>State: <strong>{{currentElement?.standardState}}</strong></p>
+        <p>Melting-Point: <strong>{{currentElement?.meltingPoint}}</strong></p>
+        <p>Booiling-point: <strong>{{currentElement?.boilingPoint}}</strong></p>
+        <p>Density: <strong>{{currentElement?.density}}</strong></p>
+        <p>Group: <strong>{{currentElement?.groupBlock}}</strong></p>
+        <p>Year Discovered: <strong>{{currentElement?.yearDiscovered}}</strong></p>
     </div>
 </div>

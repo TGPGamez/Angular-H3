@@ -11,7 +11,6 @@ export class PeriodicTableComponent implements OnInit {
 
   @Output() newElementEvent = new EventEmitter<IElement>();
 
-  currentSelectedElement?: IElement;
   elements: IElement[] = [];
 
   constructor(private getDataService: GetDataService) { }
@@ -20,7 +19,7 @@ export class PeriodicTableComponent implements OnInit {
     this.getDataService.getAllData().subscribe((data: IElement[]) => {
       next: this.elements = data;
       next: this.elements[4].period = 2;
-      complete: this.currentSelectedElement = this.elements[0];
+      complete: this.newElementEvent.emit(this.elements[0]);
     });
   }
 
@@ -35,6 +34,10 @@ export class PeriodicTableComponent implements OnInit {
   }
 
   OnClick(element: IElement) {
+    this.newElementEvent.emit(element);
+  }
 
+  OnHover(element: IElement) {
+    this.newElementEvent.emit(element);
   }
 }

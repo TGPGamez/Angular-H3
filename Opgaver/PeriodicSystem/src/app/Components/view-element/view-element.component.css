@@ -1,4 +1,36 @@
-.elementInfo {
+.element-main {
     width: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid black;
+}
+
+.element-head {
+    width: 30%;
+    padding: 5px;
+    text-align: center;
+    border-width: 2px;
+    box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.20);
+    background-color: #eee;
+}
+
+.element-head h1 {
+    margin: 0 auto;
+}
+
+.element-head p {
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.element-body {
+    display: grid;
+    float: right;
+    width: 60%;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(6, auto);
+}
+
+.element-body p {
+    margin: 0 auto;
+    font-size: 16px;
 }
