@@ -10,8 +10,9 @@
         <div class="label57to71-period"><h1>6</h1></div>
         <div class="label89to103-period"><h1>7</h1></div>
         <ng-template ngIf="true" *ngFor="let element of elements; let i = index">
-            <div *ngIf="checkNumber(element.atomicNumber) else: elseNumber" [style.grid-row]="element.period" [style.grid-column]="element.group"
-                [style.background-color]="getColor(element.cpkHexColor)" class="element">
+            <div *ngIf="CheckNumber(element.atomicNumber); else: elseNumber" (click)="OnClick(element)"
+                [style.grid-row]="element.period" [style.grid-column]="element.group"
+                [style.background-color]="GetColor(element.cpkHexColor)" class="element">
                 <div>
                     <p><b>{{element.atomicNumber}}</b></p>
                     <h1><strong>{{element.symbol}}</strong></h1>
@@ -20,8 +21,8 @@
                 </div>
             </div>
             <ng-template #elseNumber>
-                <div [style.grid-row]="element.period + 3"
-                    class="element">
+                <div [style.grid-row]="element.period + 3" [style.background-color]="GetColor(element.cpkHexColor)"
+                    (click)="OnClick(element)" class="element">
                     <p><b>{{element.atomicNumber}}</b></p>
                     <h1><strong>{{element.symbol}}</strong></h1>
                     <p><em>{{element.name}}</em></p>

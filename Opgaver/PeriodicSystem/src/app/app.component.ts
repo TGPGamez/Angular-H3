@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IElement } from './interface/ielement';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PeriodicSystem';
+
+  currentSelectedElement?: IElement;
+
+  ShowElement(element: IElement) {
+    this.currentSelectedElement = element;
+  }
 }

@@ -1,1 +1,4 @@
-<app-periodic-table></app-periodic-table>
+<div>
+    <app-periodic-table (newElementEvent)="ShowElement($event)"></app-periodic-table>
+</div>
+<app-view-element [currentElement]="currentSelectedElement"></app-view-element>

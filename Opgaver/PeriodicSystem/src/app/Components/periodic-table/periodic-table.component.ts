@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { IElement } from '../interface/ielement';
-import { GetDataService } from '../service/get-data.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { IElement } from '../../interface/ielement';
+import { GetDataService } from '../../service/get-data.service';
 
 @Component({
   selector: 'app-periodic-table',
@@ -9,6 +9,9 @@ import { GetDataService } from '../service/get-data.service';
 })
 export class PeriodicTableComponent implements OnInit {
 
+  @Output() newElementEvent = new EventEmitter<IElement>();
+
+  currentSelectedElement?: IElement;
   elements: IElement[] = [];
 
   constructor(private getDataService: GetDataService) { }
@@ -17,17 +20,21 @@ export class PeriodicTableComponent implements OnInit {
     this.getDataService.getAllData().subscribe((data: IElement[]) => {
       next: this.elements = data;
       next: this.elements[4].period = 2;
+      complete: this.currentSelectedElement = this.elements[0];
     });
   }
 
-  checkNumber(input: number) {
+  CheckNumber(input: number) {
     if ((input >= 57 && input <= 71) || (input >= 89 && input <= 103)) return false;
     return true;
   }
 
-  getColor(color?: string) {
+  GetColor(color?: string) {
     if(color != "unknown") return "#" + color;
     else return "#eee";
   }
 
+  OnClick(element: IElement) {
+
+  }
 }
