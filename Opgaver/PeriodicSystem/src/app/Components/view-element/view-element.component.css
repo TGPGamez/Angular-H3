@@ -1,15 +1,16 @@
 .element-main {
     width: 50%;
     border: 1px solid black;
+    margin: auto auto;
+    overflow: hidden;
 }
 
 .element-head {
-    width: 30%;
-    padding: 5px;
-    text-align: center;
-    border-width: 2px;
+    width: 20%;
+    border-width: 3px;
     box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.20);
     background-color: #eee;
+    float: left;
 }
 
 .element-head h1 {
@@ -23,11 +24,12 @@
 }
 
 .element-body {
-    display: grid;
     float: right;
-    width: 60%;
+    display: grid;
+    margin: 10px;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(6, auto);
+    width: 60%;
 }
 
 .element-body p {

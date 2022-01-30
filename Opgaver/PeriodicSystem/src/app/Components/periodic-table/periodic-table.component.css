@@ -13,8 +13,8 @@
 
 .pt-grid {
     display: grid;
-    grid-template-columns: repeat(18, 90px);
-    grid-template-rows: repeat(10, 90px);
+    grid-template-columns: repeat(19, 90px);
+    grid-template-rows: repeat(11, 90px);
     grid-gap: 10px;
 }
 
@@ -39,31 +39,30 @@
 }
 
 .stretch-items {
-    grid-row: 6 / span 5;
-    grid-column: 3;
+    grid-row: 7 / span 5;
+    grid-column: 4;
     background-color: lightgray;
     box-shadow: 1px 1px 1px 0 gray;
-
 }
 
 .label57to71 {
-   grid-row: 6;
-   grid-column: 3; 
+   grid-row: 7;
+   grid-column: 4; 
 }
 
 .label89to103 {
-    grid-row: 7;
-    grid-column: 3; 
+    grid-row: 8;
+    grid-column: 4; 
 }
 
 .label57to71-period {
-    grid-row: 9;
-    grid-column: 3;
+    grid-row: 10;
+    grid-column: 4;
 }
 
 .label89to103-period {
-    grid-row: 10;
-    grid-column: 3;
+    grid-row: 11;
+    grid-column: 4;
 }
 
 .label57to71-period h1, .label89to103-period h1 {
@@ -74,4 +73,14 @@
 .label57to71-period, .label89to103-period {
     align-self: center;
     text-align: center;
- }
+}
+
+.period {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.group {
+    margin-left: 30px;
+    margin-top: 20px;
+}
